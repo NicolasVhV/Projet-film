@@ -1,0 +1,22 @@
+.login-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../../../assets/bg-login.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 93%;
+  color: red;
+}
+
+.login{
+  width: 50vh;
+  height: 60vh;
+  border: 2px solid rgb(255, 0, 0);
+  background-color: rgba(37, 37, 37, 0.866);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}

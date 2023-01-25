@@ -1,0 +1,28 @@
+.custom-navbar{
+  position: fixed;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly
+}
+
+
+
+
+
+.account{
+  display: flex;
+  align-items: center;
+
+
+}
+
+input{
+  border-radius: 5vh;
+  height: 50%;
+}
+
+::placeholder{
+  text-align: center;
+}
+

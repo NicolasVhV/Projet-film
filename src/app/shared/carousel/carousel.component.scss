@@ -1,0 +1,60 @@
+// .carousel{
+//   width: 80%;
+//   height: 30vh;
+// }
+// .picsum-img-wrapper{
+//   height: 30vh;
+//   width: 150vw;
+// }
+
+// img{
+//   height: 30vh;
+//   width: 100%;
+// }
+
+.p-carousel-indicators {
+  width: 5vh;
+  height: 2vh;
+}
+
+.card{
+
+  background-color: transparent;
+  border-color: transparent;
+  width: 100%;
+  height: 50%;
+  color: whitesmoke;
+
+}
+
+:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+  background-color: red;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  border-radius: 10px;
+  display: none !important;
+}
+
+:host ::ng-deep p-carousel-indicators p-reset{
+  display: none !important;
+}
+
+:host ::ng-deep .p-carousel-container {
+  display: flex;
+  flex-direction: row;
+}
+
+:host ::ng-deep .shadow-4 {
+  height: 23vh;
+}
+
+:host ::ng-deep .p-carousel-content {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+}
+
+:host ::ng-deep .border-round text-center{
+  border-style: none;
+  margin: 1.5vh;
+}
