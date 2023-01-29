@@ -1,0 +1,33 @@
+
+
+<div class="container"   [style.background-image]=  "'url(https://image.tmdb.org/t/p/original'+movieDetailResult.backdrop_path+')' " >
+  <!-- <div class="container"   [ngStyle]="{'background-image': 'url('+ 'https://image.tmdb.org/t/p/original' + movieDetailResult.backdrop_path + ')'}"> -->
+    <div class="main">
+
+
+      <div class="film">
+
+        <div  class="image-film" >
+            <img src="https://image.tmdb.org/t/p/original{{ movieDetailResult.poster_path }}" [alt]="" />
+        </div>
+
+
+        <div class="resume">
+          <h3>{{movieDetailResult.original_title}}</h3>
+          <br>
+          <p>{{movieDetailResult.overview}}</p>
+          <p>Date de sortie: {{movieDetailResult.release_date}}</p>
+        </div>
+      </div>
+
+
+      <div class="song">
+
+
+      </div>
+
+    </div>
+
+
+</div>
+

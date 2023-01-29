@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="1000px" width="1000px">
+  <defs>
+    <linearGradient id="0" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="rgba(255, 255, 181, 0)"/>
+      <stop offset="22%" stop-color="rgba(246, 216, 96, 0)"/>
+      <stop offset="40%" stop-color="rgba(237, 137, 75, 0)"/>
+      <stop offset="57%" stop-color="rgba(26, 32, 44, 0)"/>
+      <stop offset="76%" stop-color="rgba(26, 32, 44, 0.6)"/>
+      <stop offset="94%" stop-color="rgba(26, 32, 44, 0.8)"/>
+    </linearGradient>
+    <radialGradient id="1" gradientTransform="translate(-1 -0.5) scale(2, 2)">
+      <stop offset="19%" stop-color="#d53a42"/>
+      <stop offset="39.25%" stop-color="rgba(204, 58, 78, 0.75)"/>
+      <stop offset="59.5%" stop-color="rgba(194, 57, 86, 0.5)"/>
+      <stop offset="100%" stop-color="rgba(177, 56, 94, 0)"/>
+    </radialGradient>
+  </defs>
+  <rect fill="url(#0)" height="100%" width="100%"/>
+  <rect fill="url(#1)" height="100%" width="100%"/>
+</svg>

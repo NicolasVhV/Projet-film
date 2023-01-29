@@ -1,23 +1,6 @@
-// .carousel{
-//   width: 80%;
-//   height: 30vh;
-// }
-// .picsum-img-wrapper{
-//   height: 30vh;
-//   width: 150vw;
-// }
-
-// img{
-//   height: 30vh;
-//   width: 100%;
-// }
-
-.p-carousel-indicators {
-  width: 5vh;
-  height: 2vh;
-}
-
 .card{
+//   background: rgb(0,0,0);
+// background: linear-gradient(180deg, rgba(0,0,0,0.6629026610644257) 0%, rgba(9,9,121,0) 57%);
 
   background-color: transparent;
   border-color: transparent;
@@ -27,25 +10,23 @@
 
 }
 
-:host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button {
-  background-color: red;
-  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
-  border-radius: 10px;
-  display: none !important;
-}
-
-:host ::ng-deep p-carousel-indicators p-reset{
-  display: none !important;
-}
-
 :host ::ng-deep .p-carousel-container {
   display: flex;
   flex-direction: row;
 }
 
-:host ::ng-deep .shadow-4 {
+:host ::ng-deep .shadow-4{
   height: 23vh;
+
 }
+
+:host ::ng-deep .shadow-4:hover{
+  transform:scale(1.2);
+  z-index: 100;
+}
+
+
+
 
 :host ::ng-deep .p-carousel-content {
   display: flex;
@@ -58,3 +39,6 @@
   border-style: none;
   margin: 1.5vh;
 }
+
+
+

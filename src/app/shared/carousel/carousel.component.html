@@ -1,137 +1,33 @@
-<!-- <ngb-carousel class="carousel">
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img src="../../../assets/avatar2.jpg" alt="Random first slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>First slide label</h3>
-			<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-		</div>
-	</ng-template>
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img src="../../../assets/batman.jpg" alt="Random second slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>Second slide label</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		</div>
-	</ng-template>
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img src="../../../assets/inception.jpeg" alt="Random third slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>Third slide label</h3>
-			<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-		</div>
-	</ng-template>
-</ngb-carousel> -->
 
-
-<!-- <ngb-carousel class="" *ngIf="images">
-
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img [src]="images[0]" alt="Random first slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>First slide label</h3>
-			<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-		</div>
-
-
-	</ng-template>
-
-
-
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img [src]="images[1]" alt="Random second slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>Second slide label</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		</div>
-	</ng-template>
-
-
-
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img [src]="images[2]" alt="Random third slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>Third slide label</h3>
-			<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-		</div>
-	</ng-template>
-
-
-</ngb-carousel> -->
-
-<!--
-<div class="row">
-  <h5 class="text-white">Trending Movies</h5>
-  <div class="rowposter mt-3 p-2">
-    <ng-container *ngFor="let t of trendingMovieResult">
-      <img src="https://image.tmdb.org/t/p/original/{{ t.poster_path }}" class="rowimg largeposter" alt="..."
-        [routerLink]="['/movie',t.id]">
-    </ng-container> -->
-
-    <!-- <div class="contain mt-3 mb-5 p-4"> -->
-
-      <!-- trending movies  -->
-      <!-- <div class="row">
-        <h5 class="text-white">Top film</h5>
-        <div class="rowposter mt-3 p-2">
-          <ng-container *ngFor="let t of trendingMovieResult">
-            <img src="https://image.tmdb.org/t/p/original/{{ t.poster_path }}" class="rowimg largeposter" alt="..."
-              [routerLink]="['/movie',t.id]">
-          </ng-container>
-
-        </div>
-
-      </div> -->
-
-
-<!-- <div class="contain mt-3 mb-5 p-4" styleClass="someStyleClass"> -->
     <!-- trending movies  -->
   <div class="col-14">
     <div class="card">
         <h5>Les films du moment</h5>
-        <p-carousel  [showIndicators]="false" [showNavigators]="true" [indicatorsContentStyle]="false" [value]="image"[numVisible]="8" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
-            <ng-template let-image pTemplate="item">
+        <br>
+        <p-carousel  [showIndicators]="false" [showNavigators]="true" [indicatorsContentStyle]="false" [value]="trendingMovieResult"[numVisible]="10" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
+            <ng-template let-trendingMovieResult pTemplate="item">
               <div class="border-round text-center " style="margin:0.5vh ;">
                   <div class="my-7">
-                      <img src="https://image.tmdb.org/t/p/original{{ image. poster_path }}" [alt]="" class="shadow-4" width="100%"/>
-                  </div>
-                  <div>
-                      <!-- <h5 class="mb-1">{{film.name}}</h5> -->
+                      <img [routerLink]="['/detail',trendingMovieResult.id]" src="https://image.tmdb.org/t/p/original{{ trendingMovieResult. poster_path }}" [alt]="" class="shadow-4" width="100%"/>
                   </div>
               </div>
             </ng-template>
         </p-carousel>
     </div>
   </div>
+<br>
 
-
-  <!-- trending movies  -->
-<!-- <div class="col-14"> -->
+  <!-- Upcoming  -->
   <div class="card">
       <h5>Les derniers films ajoutés</h5>
-      <p-carousel  [showIndicators]="false" [showNavigators]="true" [indicatorsContentStyle]="false" [value]="latestMovieResult" [numVisible]="8" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
-          <ng-template let-latestMovieResult pTemplate="item">
+      <br>
+      <p-carousel  [showIndicators]="false" [showNavigators]="true" [indicatorsContentStyle]="false" [value]="upComingMovieResult" [numVisible]="10" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
+          <ng-template let-upComingMovieResult pTemplate="item">
             <div class="border-round text-center " style="margin:0.5vh ;"  >
                 <div class="my-7">
-                    <img src="https://image.tmdb.org/t/p/original{{ latestMovieResult. poster_path }}" [alt]="" class="shadow-4" width="100%"/>
-                </div>
-                <div>
-                    <!-- <h5 class="mb-1">{{film.name}}</h5> -->
+                    <img [routerLink]="['/detail',upComingMovieResult.id]" src="https://image.tmdb.org/t/p/original{{ upComingMovieResult. poster_path }}" [alt]="" class="shadow-4" width="100%"/>
                 </div>
             </div>
           </ng-template>
       </p-carousel>
   </div>
-<!-- </div>
-</div> -->

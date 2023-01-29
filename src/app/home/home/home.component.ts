@@ -1,51 +1,43 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieApiService } from "src/app/services/movie-api.service";
-import { ImageModule } from "primeng/image";
+import { MovieApiService } from 'src/app/services/movie-api.service';
+import { ImageModule } from 'primeng/image';
 import { map, timer } from 'rxjs';
-
+import { SpotifyApiService } from 'src/app/services/spotify-api.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-
 })
 export class HomeComponent implements OnInit {
-  image! : [];
-  trendingMovieResult: any = [
-  ];
-
-  constructor(private service : MovieApiService) { }
-
-
+  image!: [];
+  trendingMovieResult: any = [];
+  artistsSpotify: any = [];
+  artists!: [];
+  constructor(private service: MovieApiService) {}
 
   ngOnInit(): void {
     this.trendingData();
-
-
-
+    // this.getArtistsSpotify()
   }
 
+  // getAritstsSpotify(){
+  //   this.service.getArtistsSpotify().subscribe((result) => {
+  //     let data:any = result.results
+  // this.artists = data
+
+  // this.artistsSpotify = result.results
+
+  //   })
+  // }
 
   trendingData() {
     this.service.trendingMovieApiData().subscribe((result) => {
       console.log(result, 'trendingresult#');
-
-      let data:any = result.results
-
-      this.image = data
-
-
-      console.log(this.image);
-
-
+      let data: any = result.results;
+      this.image = data;
       this.trendingMovieResult = result.results;
-      console.log(this.trendingMovieResult[0].poster_path);
-      console.log(this.trendingMovieResult[0].backdrop_path);
-
-      // this.trendingMovieResult
+      console.log("FILM/ " , this.trendingMovieResult)
     });
   }
-
-  $film = timer(0, 1000).pipe(map((i: number) => this.image[i % this.image.length]))
 }

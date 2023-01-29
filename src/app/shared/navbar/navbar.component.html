@@ -1,36 +1,30 @@
 <mat-toolbar class="custom-navbar" color="primary">
-  <!-- <img routerLink=""  class="logo" src="/assets/logo.png" alt="logo"> -->
 
   <div class="categorie">
+
+    <img routerLink=""  class="logo" src="/assets/logo-film.png" alt="logo">
     <button mat-button color="Basic">Films</button>
     <button mat-button color="Basic">Musiques</button>
     <button mat-button color="Basic">Nouveautés</button>
     <button mat-button color="Basic">Playlists</button>
+
   </div>
 
 
   <div class="account">
 
-
-  <input type="text" placeholder="Recherche">
-  <mat-icon class="customIcon">search</mat-icon>
-
-
-<div>
-
-</div>
-
-
+    <input type="text" placeholder="Titres,genres,auteurs,...">
+    <mat-icon class="customIcon">search</mat-icon>
 
   </div>
 
 
-    <div class="connect">
-      <button  mat-button color="Basic">Créer un compte</button>
-      <button  mat-raised-button color="Warn" routerLink="compo/login">Se connecter</button>
-    </div>
+  <div class="connect">
+
+    <button mat-button color="Basic">Créer un compte</button>
+    <button mat-raised-button color="Warn" routerLink="/login">Se connecter</button>
+
+  </div>
 
 
-
-
-  </mat-toolbar>
+</mat-toolbar>

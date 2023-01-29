@@ -30,6 +30,9 @@ import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieApiService } from "./services/movie-api.service";
 import { ImageModule } from "primeng/image";
+import { FilmDetailComponent } from './film-detail/film-detail.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { PanelModule } from 'primeng/panel';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,7 @@ import { ImageModule } from "primeng/image";
     HomeComponent,
     CarouselComponent,
     LoginComponent,
+    FilmDetailComponent,
   ],
 
   imports: [
@@ -61,7 +65,11 @@ import { ImageModule } from "primeng/image";
     ButtonModule,
     CarouselModule,
     GalleriaModule,
-    ImageModule
+    ImageModule,
+    ButtonModule,
+    InputTextModule,
+    PanelModule
+
 
   ],
   providers: [

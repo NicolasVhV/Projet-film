@@ -1,14 +1,24 @@
-
 <div class="home">
-
-  <div class="musique">
-  </div>
+  <!-- <div class="musique">
+  </div> -->
   <div class="film">
     <div class="welcom">
 
-          <!-- <p-image *ngFor="let image of trendingMovieResult" src="https://image.tmdb.org/t/p/original{{ image .backdrop_path }}" alt=""></p-image> -->
+      <p-carousel  [showIndicators]="false" [showNavigators]="false" [indicatorsContentStyle]="false" [value]="image"
+        [numVisible]="1" [numScroll]="1" [autoplayInterval]="5000" [circular]="true">
+        <ng-template let-image pTemplate="item">
 
-    </div>
+            <img src="https://image.tmdb.org/t/p/original{{ image. backdrop_path }}" [alt]="" width="100%"
+            class="shadow-4" height="550vh" />
+            <h2 class="info">{{image.original_title}}</h2>
+
+
+
+
+          </ng-template>
+        </p-carousel>
+
+      </div>
 
     <div class="top-films">
       <app-carousel></app-carousel>
@@ -16,6 +26,3 @@
 
   </div>
 </div>
-
-
-
