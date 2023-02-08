@@ -45,7 +45,7 @@ export class CarouselComponent implements OnInit {
 
   trendingData() {
     this.service.trendingMovieApiData().subscribe((result) => {
-      console.log(result, 'trendingresult#');
+      // console.log(result, 'trendingresult#');
       this.trendingMovieResult = result.results;
     });
   }
@@ -54,20 +54,10 @@ export class CarouselComponent implements OnInit {
 
   upComingMovie() {
     this.service.upComingMovieApiData().subscribe((result) => {
-      console.log('upcomingdata', result);
+      // console.log('upcomingdata', result);
       this.upComingMovieResult = result.results;
     });
   }
-
-
-  // getById(){
-
-  //    const id =this.service.getById(id).subscribe((result) =>{
-  //     console.log();
-  //     this.imageId = result
-  //   })
-
-  //   }
 
   }
 

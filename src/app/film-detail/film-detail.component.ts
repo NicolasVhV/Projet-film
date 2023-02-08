@@ -20,6 +20,7 @@ export class FilmDetailComponent implements OnInit {
   constructor(private service: MovieApiService, private router : ActivatedRoute, private http : HttpClient) { }
 
   ngOnInit(): void {
+
     let getParamId = this.router.snapshot.paramMap.get('id');
     console.log(getParamId,'getparamid#');
     this.getMovie(getParamId);

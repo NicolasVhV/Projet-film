@@ -1,0 +1,67 @@
+<!-- <div class="card">
+  <input #searchBox (keyup)="search(searchBox.value)" placeholder="Rechercher un film" type="text">
+
+  <div class="collection">
+    <a
+        *ngFor="let movie of movie$ | async"
+        class="collection-item"
+        >
+        {{ movie.title }}
+    </a>
+  </div>
+</div> -->
+
+<!--
+<p-autoComplete #searchBox (keyup)="search(searchBox.value)"
+[showEmptyMessage]="false"
+ [suggestions]="movieResult"
+  >
+
+
+
+
+</p-autoComplete>
+
+<p-listbox [options]="movieResult" [(ngModel)]="movieResult" optionLabel="name"></p-listbox>
+ -->
+ <p-autoComplete  id="search-box" placeholder="Rechercher un film"
+                [showEmptyMessage]="true" [suggestions]="movieResult"
+                (completeMethod)="filterMovie($event)" field="title"
+                (onSelect)="getMovieDetails($event)"
+                [delay]="500"
+                [style]="{
+                  display: 'inline-flex',
+                  height: '3vh'
+                }">
+
+
+              <ng-template let-movie pTemplate="item">
+                <div  class="country-item">
+                    <img src="https://image.tmdb.org/t/p/original{{movie.picture}}"  />
+                    <div [routerLink]="['/detail',movieDetailResult.id]">{{movie.title}}</div>
+                </div>
+            </ng-template>
+</p-autoComplete>
+
+
+<!-- <div>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)"/>
+<ol>
+  <li>
+    <a *ngFor="let movie of movieResult.slice(0, 2);" >
+      {{movie}}
+    </a>
+  </li>
+
+
+
+</ol>
+
+</div> -->
+
+
+
+
+
+
+

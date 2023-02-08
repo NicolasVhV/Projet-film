@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.trendingData();
+
     // this.getArtistsSpotify()
   }
 
@@ -31,13 +32,14 @@ export class HomeComponent implements OnInit {
   //   })
   // }
 
+
+
   trendingData() {
     this.service.trendingMovieApiData().subscribe((result) => {
-      console.log(result, 'trendingresult#');
       let data: any = result.results;
       this.image = data;
       this.trendingMovieResult = result.results;
-      console.log("FILM/ " , this.trendingMovieResult)
+      // console.log("FILM/ " , this.trendingMovieResult)
     });
   }
 }

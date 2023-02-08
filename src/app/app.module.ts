@@ -33,6 +33,14 @@ import { ImageModule } from "primeng/image";
 import { FilmDetailComponent } from './film-detail/film-detail.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { PanelModule } from 'primeng/panel';
+import { SearchComponent } from './shared/search/search.component';
+import { AutoCompleteModule } from "primeng/autocomplete";
+import { ListboxModule } from "primeng/listbox";
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { PasswordModule } from "primeng/password";
+import { CreateUserComponent } from './create-user/create-user.component';
+import {CardModule} from 'primeng/card';
+import { TokenInterceptorProvider } from './shared/user.interceptor';
 
 @NgModule({
   declarations: [
@@ -42,6 +50,8 @@ import { PanelModule } from 'primeng/panel';
     CarouselComponent,
     LoginComponent,
     FilmDetailComponent,
+    SearchComponent,
+    CreateUserComponent,
   ],
 
   imports: [
@@ -68,7 +78,12 @@ import { PanelModule } from 'primeng/panel';
     ImageModule,
     ButtonModule,
     InputTextModule,
-    PanelModule
+    PanelModule,
+    AutoCompleteModule,
+    ListboxModule,
+    MatAutocompleteModule,
+    PasswordModule,
+    CardModule
 
 
   ],
@@ -77,7 +92,9 @@ import { PanelModule } from 'primeng/panel';
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: { floatLabel: 'auto' },
 
+
     },
+    TokenInterceptorProvider
   ],
   bootstrap: [AppComponent],
 })

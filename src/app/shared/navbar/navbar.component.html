@@ -13,15 +13,16 @@
 
   <div class="account">
 
-    <input type="text" placeholder="Titres,genres,auteurs,...">
-    <mat-icon class="customIcon">search</mat-icon>
+    <!-- <input type="text" placeholder="Titres,genres,auteurs,..."> -->
+    <app-search></app-search>
+    <!-- <mat-icon class="customIcon">search</mat-icon> -->
 
   </div>
 
 
   <div class="connect">
 
-    <button mat-button color="Basic">Créer un compte</button>
+    <button mat-button color="Basic" routerLink="/createUser">Créer un compte</button>
     <button mat-raised-button color="Warn" routerLink="/login">Se connecter</button>
 
   </div>

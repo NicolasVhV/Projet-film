@@ -1,0 +1,15 @@
+<p-card >
+  <span class="p-float-label">
+    <input [(ngModel)]="this.user.mail" id="float-input" type="text" pInputText>
+    <label for="float-input">Username</label>
+  </span>
+
+
+
+  <!-- <input type="password" pPassword /> -->
+  <p-password [(ngModel)]="this.user.password"></p-password>
+
+  <button (click)="testConnection(this.user)">envoyer</button>
+</p-card>
+
+

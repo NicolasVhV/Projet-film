@@ -8,12 +8,8 @@
         [numVisible]="1" [numScroll]="1" [autoplayInterval]="5000" [circular]="true">
         <ng-template let-image pTemplate="item">
 
-            <img src="https://image.tmdb.org/t/p/original{{ image. backdrop_path }}" [alt]="" width="100%"
+             <img src="https://image.tmdb.org/t/p/original{{ image. backdrop_path }}" [alt]="" width="100%"
             class="shadow-4" height="550vh" />
-            <h2 class="info">{{image.original_title}}</h2>
-
-
-
 
           </ng-template>
         </p-carousel>
